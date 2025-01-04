@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import navbar from "./components/navbar";
 import Image from "next/image";
 import ngcModel from "../../public/ngc-model.png";
+import { NgcText } from "./components/ngctext";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,44 +28,38 @@ export default function Home() {
   return (
     <>
       {navbar()}
-      <div
-        className={styles.ngcText}
+      <NgcText
+        text="NO"
         style={
           {
             "--left": "31%",
             "--top": "15%",
             "--bottom": "0",
             "--z-index": "2",
-          } as any
+          } as React.CSSProperties
         }
-      >
-        <span>NO</span>
-      </div>
-      <div
-        className={styles.ngcText}
+      />
+      <NgcText
+        text="GAINS"
         style={
           {
             "--left": "38%",
             "--top": "36%",
             "--z-index": "6",
-          } as any
+          } as React.CSSProperties
         }
-      >
-        <span>GAINS</span>
-      </div>
-      <div
-        className={styles.ngcText}
+      />
+      <NgcText
+        text="CLUB"
         style={
           {
             "--left": "60%",
             "--top": "58%",
             "--bottom": "0",
             "--z-index": "2",
-          } as any
+          } as React.CSSProperties
         }
-      >
-        <span>CLUB</span>
-      </div>
+      />
 
       <div className={styles.container}>
         {/* <main
