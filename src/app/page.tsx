@@ -2,6 +2,8 @@
 import styles from "./styles/page.module.css";
 import { useEffect, useRef, useState } from "react";
 import navbar from "./components/navbar";
+import Image from "next/image";
+import ngcModel from "../../public/ngc-model.png";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,12 +25,52 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <main
-        className={`${styles.main} ${isVisible ? styles.visible : ""}`}
-        ref={mainRef}
+    <>
+      {navbar()}
+      <div
+        className={styles.ngcText}
+        style={
+          {
+            "--left": "31%",
+            "--top": "15%",
+            "--bottom": "0",
+            "--z-index": "2",
+          } as any
+        }
       >
-        {navbar()}
+        <span>NO</span>
+      </div>
+      <div
+        className={styles.ngcText}
+        style={
+          {
+            "--left": "38%",
+            "--top": "36%",
+            "--z-index": "6",
+          } as any
+        }
+      >
+        <span>GAINS</span>
+      </div>
+      <div
+        className={styles.ngcText}
+        style={
+          {
+            "--left": "60%",
+            "--top": "58%",
+            "--bottom": "0",
+            "--z-index": "2",
+          } as any
+        }
+      >
+        <span>CLUB</span>
+      </div>
+
+      <div className={styles.container}>
+        {/* <main
+          className={`${styles.container} ${isVisible ? styles.visible : ""}`}
+          ref={mainRef}
+        > */}
         <div className={styles.textContainer}>
           <h2>Gear Up for the Grind</h2>
           <p>
@@ -39,17 +81,13 @@ export default function Home() {
           </p>
           <button className={styles.shopNow}>Shop Now</button>
         </div>
-        <div className={styles.imageContainer}>
-          <div className={styles.background}>
-            <span>NO GAINS CLUB</span>
+        <div className={styles.bannerContainer}>
+          <div className={styles.bannerImage}>
+            <Image src={ngcModel} alt="NGC Model" />
           </div>
-          <img
-            src="/model-image.png"
-            alt="Fashion Model"
-            className={styles.modelImage}
-          />
         </div>
-      </main>
-    </div>
+        {/* </main> */}
+      </div>
+    </>
   );
 }

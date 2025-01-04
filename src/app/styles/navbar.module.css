@@ -3,14 +3,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   position: fixed;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.4);
+  background: #faf9f6;
+
+  /* For glassmorphism navbar  */
+  /* background: rgba(255, 255, 255, 0.4);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2); */
 }
 .logo {
   display: flex;
