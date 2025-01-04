@@ -1,8 +1,7 @@
 "use client";
 import styles from "./styles/page.module.css";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import ngcLogo from "../../public/ngc-logo.png";
+import navbar from "./components/navbar";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,26 +24,11 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <Image src={ngcLogo} alt="NGC Logo" width={78} height={78} />
-        </div>
-        <nav className={styles.nav}>
-          <a href="#">Women</a>
-          <a href="#">Men</a>
-          <a href="#">Accessories</a>
-        </nav>
-        <div className={styles.actions}>
-          <button className={styles.icon}>♡</button>
-          <button className={styles.icon}>👤</button>
-          <button className={styles.icon}>🛒</button>
-        </div>
-      </header>
-
       <main
         className={`${styles.main} ${isVisible ? styles.visible : ""}`}
         ref={mainRef}
       >
+        {navbar()}
         <div className={styles.textContainer}>
           <h2>Gear Up for the Grind</h2>
           <p>

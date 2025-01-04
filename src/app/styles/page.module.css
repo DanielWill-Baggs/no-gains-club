@@ -4,52 +4,11 @@
   overflow-x: hidden;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ccc;
-  background-color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #333;
-  transition: color 0.3s;
-}
-
-.nav a:hover {
-  color: red;
-}
-
-.actions .icon {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.actions .icon:hover {
-  transform: scale(1.2);
-}
-
 .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 0.5rem;
   min-height: 80vh;
   animation: fadeIn 1s ease-in-out;
 }
