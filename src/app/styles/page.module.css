@@ -7,74 +7,87 @@
   height: 100vh;
 }
 
-/* .main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  min-height: 80vh;
-  animation: fadeIn 1s ease-in-out;
-} */
-
 .textContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  left: 2%;
+  bottom: 10%;
+  padding: 2rem;
   grid-area: 1/1/2/2;
-  animation: slideInLeft 1s ease-in-out;
+  font-family: var(--font-barlow);
+  animation: slideInLeft 3s ease-in-out;
 }
 
 .textContainer h2 {
-  font-size: 2.5rem;
+  font-family: var(--font-barlow);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .textContainer p {
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #000000;
   margin-bottom: 2rem;
-  font-size: 1rem;
 }
 
-.brandName {
-  font-weight: bold;
-  color: red;
+.brandNameContainer {
+  width: 160px;
+  height: 35px;
+  font-family: var(--font-barlow);
+  position: absolute;
+  left: 38%;
+  top: 26%;
 }
 
-.shopNow {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
+.brandNameRectangle {
+  animation: slideInLeft 3s ease-in-out;
 }
 
-.shopNow:hover {
-  background-color: darkred;
+.brandNameRectangle:hover {
+  fill: #ff6167;
   transform: scale(1.1);
+}
+
+.brandNameText {
+  font-size: 18px;
+  fill: #ffffff;
+  animation: slideInLeft 3.5s ease-in-out;
 }
 
 .bannerContainer {
   grid-area: 1/2/2/3;
   background-color: #ad1f26;
   position: relative;
-  animation: slideInRight 1s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .bannerImage {
-  width: auto;
-  height: auto;
-  position: fixed;
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  height: auto;
+  max-height: 100%;
   z-index: 3;
 }
 
 .ngcText {
-  position: fixed;
+  position: absolute;
   left: var(--left);
   top: var(--top);
   bottom: var(--bottom);
@@ -85,6 +98,7 @@
   color: #ffffff;
   -webkit-text-stroke: #000000 0.8px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  animation: slideInLeft var(--duration) ease-in-out;
 }
 
 /* Animations */

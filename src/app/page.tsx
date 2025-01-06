@@ -5,6 +5,7 @@ import navbar from "./components/navbar";
 import Image from "next/image";
 import ngcModel from "../../public/ngc-model.png";
 import { NgcText } from "./components/ngctext";
+import { GenericButton } from "./components/button";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +37,7 @@ export default function Home() {
             "--top": "15%",
             "--bottom": "0",
             "--z-index": "2",
+            "--duration": "1s",
           } as React.CSSProperties
         }
       />
@@ -46,6 +48,7 @@ export default function Home() {
             "--left": "38%",
             "--top": "36%",
             "--z-index": "6",
+            "--duration": "1.5s",
           } as React.CSSProperties
         }
       />
@@ -57,31 +60,51 @@ export default function Home() {
             "--top": "58%",
             "--bottom": "0",
             "--z-index": "2",
+            "--duration": "1s",
           } as React.CSSProperties
         }
       />
 
       <div className={styles.container}>
-        {/* <main
-          className={`${styles.container} ${isVisible ? styles.visible : ""}`}
-          ref={mainRef}
-        > */}
         <div className={styles.textContainer}>
           <h2>Gear Up for the Grind</h2>
+
+          <div className={styles.brandNameContainer}>
+            <svg viewBox="0 0 160 35" style={{ width: "100%", height: "100%" }}>
+              <rect
+                className={styles.brandNameRectangle}
+                x="0"
+                y="0"
+                width="160"
+                height="35"
+                fill="#ec3942"
+              />
+              <text
+                className={styles.brandNameText}
+                x="80"
+                y="17.5"
+                textAnchor="middle"
+                dominantBaseline="middle"
+              >
+                No Gains Club
+              </text>
+            </svg>
+          </div>
           <p>
-            Introducing <span className={styles.brandName}>No Gains Club</span>
+            Introducing
             <br />
-            The Ultimate Fusion of Performance, Style, and Prestige for Every
-            Gym Rat.
+            The Ultimate Fusion of Performance,
+            <br />
+            Style, and Prestige for Every Gym Rat.
           </p>
-          <button className={styles.shopNow}>Shop Now</button>
+          <GenericButton text="Shop Now" />
         </div>
+
         <div className={styles.bannerContainer}>
           <div className={styles.bannerImage}>
             <Image src={ngcModel} alt="NGC Model" />
           </div>
         </div>
-        {/* </main> */}
       </div>
     </>
   );
