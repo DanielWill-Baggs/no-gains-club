@@ -1,34 +1,19 @@
-"use client";
-import styles from "./styles/page.module.css";
-import { useEffect, useRef, useState } from "react";
-import navbar from "./components/navbar";
+/* Client Imports for Next.js */
+// "use client";
+// import { useEffect, useRef, useState } from "react";
+
+/* Styles and Assets */
 import Image from "next/image";
-import ngcModel from "../../public/ngc-model.png";
+import styles from "./styles/page.module.css";
+
+/* Components and Layouts */
 import { NgcText } from "./components/ngctext";
 import { GenericButton } from "./components/button";
+import ngcModel from "../../public/ngc-model.png";
 
-export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-  const mainRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (mainRef.current) observer.observe(mainRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
+export default function Landing() {
   return (
     <>
-      {navbar()}
       <NgcText
         text="NO"
         style={

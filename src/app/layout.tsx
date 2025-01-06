@@ -4,6 +4,7 @@ import {
   Barlow_Condensed,
 } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
 
 const barlowCondensed = Barlow_Condensed({
   weight: ["500", "700"],
@@ -22,19 +23,14 @@ const barlow = Barlow({
   variable: "--font-barlow",
 });
 
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function NGCLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${barlow.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
     >
       <body>
-        {/* Layout UI */}
-        {/* Place children where you want to render a page or nested layout */}
+        <Navbar />
         <main>{children}</main>
       </body>
     </html>
