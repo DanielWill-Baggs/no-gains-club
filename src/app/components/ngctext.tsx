@@ -1,4 +1,4 @@
-import styles from "./../styles/page.module.css";
+import styles from "./../styles/herosection.module.css";
 export const NgcText = ({
   text,
   style,

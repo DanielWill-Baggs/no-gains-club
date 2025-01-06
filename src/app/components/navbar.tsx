@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../styles/navbar.module.css";
+import styles from "../styles/Navbar.module.css";
 import ngcLogo from "./../../../public/ngc-logo.png";
 import { Heart, User, ShoppingCart } from "lucide-react";
 
-export default function navbar() {
+export default function Navbar() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
