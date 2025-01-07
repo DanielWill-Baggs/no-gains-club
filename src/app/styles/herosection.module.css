@@ -5,6 +5,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   height: 100vh;
+  position: relative;
 }
 
 .textContainer {

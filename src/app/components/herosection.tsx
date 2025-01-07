@@ -24,41 +24,6 @@ export default function HeroSection() {
 
   return (
     <>
-      <NgcText
-        text="NO"
-        style={
-          {
-            "--left": "31%",
-            "--top": "15%",
-            "--bottom": "0",
-            "--z-index": "2",
-            "--duration": "1s",
-          } as React.CSSProperties
-        }
-      />
-      <NgcText
-        text="GAINS"
-        style={
-          {
-            "--left": "38%",
-            "--top": "36%",
-            "--z-index": "6",
-            "--duration": "1.5s",
-          } as React.CSSProperties
-        }
-      />
-      <NgcText
-        text="CLUB"
-        style={
-          {
-            "--left": "60%",
-            "--top": "58%",
-            "--bottom": "0",
-            "--z-index": "2",
-            "--duration": "1s",
-          } as React.CSSProperties
-        }
-      />
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <h2>Gear Up for the Grind</h2>
@@ -94,6 +59,41 @@ export default function HeroSection() {
           <GenericButton text="Shop Now" />
         </div>
 
+        <NgcText
+          text="NO"
+          style={
+            {
+              "--left": "31%",
+              "--top": "15%",
+              "--bottom": "0",
+              "--z-index": "2",
+              "--duration": "1s",
+            } as React.CSSProperties
+          }
+        />
+        <NgcText
+          text="GAINS"
+          style={
+            {
+              "--left": "38%",
+              "--top": "36%",
+              "--z-index": "6",
+              "--duration": "1.5s",
+            } as React.CSSProperties
+          }
+        />
+        <NgcText
+          text="CLUB"
+          style={
+            {
+              "--left": "60%",
+              "--top": "58%",
+              "--bottom": "0",
+              "--z-index": "2",
+              "--duration": "1s",
+            } as React.CSSProperties
+          }
+        />
         <div className={styles.bannerContainer}>
           <div className={styles.bannerImage}>
             <Image src={ngcModel} alt="NGC Model" />
