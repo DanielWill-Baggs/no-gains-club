@@ -1,28 +1,41 @@
 import styles from "./../styles/card.module.css";
 import Image from "next/image";
-import ngcIcarus from "../../../public/ngc-icarus.png";
 import { Heart } from "lucide-react";
+import type { CardProps } from "../types/card";
 
-export default function card(...cardProps: any) {
+export default function Card({
+  id,
+  src,
+  alt,
+  title,
+  category,
+  description,
+  price,
+  favorite,
+}: CardProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
-        <div className={styles.cardImageContainer}>
-          <div className={styles.cardImageInfo}>
-            <h1>NEW</h1>
-          </div>
-          <div className={styles.cardImageFavorite}>
-            <button className={styles.cardImageIcon}>
-              <Heart strokeWidth={2.5} />
-            </button>
-          </div>
-          <Image src={ngcIcarus} alt="{}" className={styles.cardImage} />
+    <div className={styles.card}>
+      <div className={styles.cardImageContainer}>
+        <div className={styles.cardImageInfo}>
+          <h1>{category}</h1>
         </div>
-        <div className={styles.cardTextContainer}>
-          <h2>Title Text</h2>
-          <p>Description</p>
-          <h3>$100</h3>
+        <div className={styles.cardImageFavorite}>
+          <button className={styles.cardImageIcon}>
+            <Heart strokeWidth={2.5} fill={favorite ? "red" : "none"} />
+          </button>
         </div>
+        <Image
+          src={src}
+          alt={alt}
+          width={500}
+          height={500}
+          className={styles.cardImage}
+        />
+      </div>
+      <div className={styles.cardTextContainer}>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <h3>${price}</h3>
       </div>
     </div>
   );

@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+
+  {
+    "id": 3,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 4,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 5,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 6,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 7,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  },
+  {
+    "id": 8,
+    "src": "/ngc-icarus.png",
+    "alt": "NGC Icarus Shirt",
+    "title": "Essential Icarus T-Shirt",
+    "category": "NEW",
+    "description": "Slim Fit",
+    "price": 34.99,
+    "favorite": false
+  }
+]

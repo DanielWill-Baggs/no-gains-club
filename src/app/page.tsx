@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 /* Components */
 import HeroSection from "./components/herosection";
-import Card from "./components/card";
+import CardGrid from "./components/cardgrid";
 
 export default function Landing() {
   const [mounted, setMounted] = useState(false);
@@ -19,7 +19,7 @@ export default function Landing() {
   return (
     <>
       <HeroSection />
-      <Card />
+      <CardGrid />
     </>
   );
 }
