@@ -75,7 +75,7 @@
   justify-content: center;
   font-family: var(--font-barlow-semi-condensed);
   font-weight: 600;
-  font-size: clamp(10px, 1vw, 14px);
+  font-size: clamp(8px, 0.4vw, 14px);
   line-height: 50;
   text-transform: uppercase;
   color: #000000;
