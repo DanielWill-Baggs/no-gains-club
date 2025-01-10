@@ -1,7 +1,3 @@
-/* Client Imports for Next.js */
-"use client";
-import { useEffect, useRef, useState } from "react";
-
 /* Styles and Assets */
 import Image from "next/image";
 import styles from "./../styles/herosection.module.css";
@@ -12,16 +8,6 @@ import { GenericButton } from "./button";
 import { NgcText } from "./ngctext";
 
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <>
       <div className={styles.container}>

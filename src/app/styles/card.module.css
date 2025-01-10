@@ -11,10 +11,108 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fefefe;
+  background-color: #f2f2f2;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 340px;
-  max-height: 427.79px;
+  max-height: 430px;
+}
+
+.cardImageContainer {
+  width: 310px;
+  height: 315px;
+  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardImageFavorite {
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  width: 39px;
+  height: 41px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+}
+
+.cardImageIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 2;
+}
+.cardImageIcon:hover {
+  transform: scale(1.1);
+  color: #cc1111;
+}
+
+.cardImageInfo {
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 95px;
+  height: 35px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-barlow-semi-condensed);
+  font-weight: 600;
+  font-size: clamp(10px, 1vw, 14px);
+  line-height: 50;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.cardTextContainer {
+  width: 310px;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+.card h2 {
+  margin-top: 10px;
+  font-family: var(--font-barlow);
+  font-weight: 500;
+  font-size: clamp(16px, 1vw, 22px);
+  line-height: 30px;
+  color: #000000;
+}
+
+.card p {
+  font-family: var(--font-barlow);
+  font-weight: 300;
+  font-size: clamp(12px, 1vw, 16px);
+  color: #000000;
+}
+
+.card h3 {
+  margin-top: 5px;
+  font-family: var(--font-barlow);
+  font-weight: 600;
+  font-size: clamp(16px, 1vw, 22px);
+  text-transform: uppercase;
 }
