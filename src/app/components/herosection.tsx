@@ -67,7 +67,7 @@ export default function HeroSection() {
               "--top": "15%",
               "--bottom": "0",
               "--z-index": "2",
-              "--duration": "1s",
+              "--duration": "3s",
             } as React.CSSProperties
           }
         />
@@ -78,7 +78,7 @@ export default function HeroSection() {
               "--left": "38%",
               "--top": "36%",
               "--z-index": "6",
-              "--duration": "1.5s",
+              "--duration": "3.5s",
             } as React.CSSProperties
           }
         />
@@ -90,7 +90,7 @@ export default function HeroSection() {
               "--top": "58%",
               "--bottom": "0",
               "--z-index": "2",
-              "--duration": "1s",
+              "--duration": "3s",
             } as React.CSSProperties
           }
         />
