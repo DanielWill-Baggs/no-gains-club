@@ -1,12 +1,22 @@
+"use client";
 import React from "react";
 import { Heart, Share2, ChevronLeft, ChevronRight } from "lucide-react";
-import styles from "./../styles/productpage.module.css";
+import styles from "../../styles/productpage.module.css";
+import useMounted from "../../utils/useMounted";
 
-export function ProductPage() {
+export default function ProductPage() {
+  const isMounted = useMounted();
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <main className={styles.container}>
       <div className={styles.imageContainer}>
         <div className={styles.mainImage}>
+          {/* <Image src={ngcModel} alt="NGC Model" /> */}
+
           <img
             src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
             alt="Running shorts front view"

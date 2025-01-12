@@ -5,15 +5,12 @@ import { useEffect, useRef, useState } from "react";
 /* Components */
 import HeroSection from "./components/herosection";
 import CardGrid from "./components/cardgrid";
+import useMounted from "./utils/useMounted";
 
 export default function Landing() {
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useMounted();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
+  if (!isMounted) {
     return null;
   }
   return (
