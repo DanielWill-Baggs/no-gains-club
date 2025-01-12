@@ -36,7 +36,7 @@ export default function ProductPage() {
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.productInfo}>
-          <div className="badge">NEW</div>
+          <div className={styles.badge}>NEW</div>
           <h1 className={styles.productTitle}>RUNNING 2 IN 1 SHORTS</h1>
           <p className={styles.productFit}>Regular Fit</p>
           <p className={styles.productPrice}>$72</p>

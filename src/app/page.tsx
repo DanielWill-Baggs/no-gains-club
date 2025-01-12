@@ -1,6 +1,5 @@
 /* Client Imports for Next.js */
 "use client";
-import { useEffect, useRef, useState } from "react";
 
 /* Components */
 import HeroSection from "./components/herosection";

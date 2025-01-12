@@ -39,14 +39,15 @@
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .carouselButtonLeft {
-  left: 1rem;
+  left: 1.2rem;
 }
 
 .carouselButtonRight {
-  right: 1rem;
+  right: 1.2rem;
 }
 
 .icon {
@@ -70,6 +71,9 @@
 }
 
 .badge {
+  border-radius: 0.25rem;
+  font: var(--font-barlow-condensed);
+  font-weight: 400;
   display: inline-block;
   padding: 0.25rem 0.5rem;
   background-color: black;
@@ -82,11 +86,17 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  font-family: var(--font-barlow);
+  font-weight: 500;
+  line-height: 30px;
+  color: #000000;
 }
 
 .productFit,
 .productPrice {
   margin-bottom: 1rem;
+  font-family: var(--font-barlow);
+  font-weight: 400;
 }
 
 .productPrice {
@@ -97,6 +107,8 @@
 /* Color selection */
 .colorSelection {
   margin-bottom: 2rem;
+  font-family: var(--font-barlow);
+  font-weight: 400;
 }
 
 .colorTitle {
@@ -112,7 +124,6 @@
 .colorOption {
   width: 4rem;
   height: 4rem;
-  border: 1px solid #e5e5e5;
   transition: border-color 0.3s;
 }
 
@@ -136,11 +147,17 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .sizeGuide {
   font-size: 0.875rem;
   text-decoration: underline;
+  border: none;
+  font-family: var(--font-barlow);
+  font-weight: 400;
 }
 
 .sizeOptions {
@@ -153,6 +170,7 @@
   padding: 0.75rem;
   border: 1px solid #e5e5e5;
   transition: border-color 0.3s;
+  font-family: var(--font-barlow);
 }
 
 .sizeOption:hover {
@@ -170,6 +188,9 @@
   color: white;
   padding: 1rem;
   transition: background-color 0.3s;
+  font-family: var(--font-barlow);
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .addToBag:hover {
@@ -187,6 +208,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border: none;
 }
 
 /* Delivery info */
@@ -197,11 +219,13 @@
 }
 
 .deliveryTitle {
+  font-family: var(--font-barlow);
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .deliveryDescription {
+  font-family: var(--font-barlow);
   font-size: 0.875rem;
   color: #666;
 }
