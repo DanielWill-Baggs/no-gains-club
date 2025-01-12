@@ -21,7 +21,11 @@ export default function Card({
         </div>
         <div className={styles.cardImageFavorite}>
           <button className={styles.cardImageIcon}>
-            <Heart strokeWidth={2.5} fill={favorite ? "red" : "none"} />
+            <Heart
+              strokeWidth={2.5}
+              fill={favorite ? "red" : "none"}
+              stroke={favorite ? "none" : "black"}
+            />
           </button>
         </div>
         <Image
