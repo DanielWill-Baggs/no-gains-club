@@ -1,13 +1,19 @@
 "use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 import { Heart, Share2, ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "../../styles/productpage.module.css";
 import useMounted from "../../utils/useMounted";
-
+import urlParser from "../../utils/urlParser";
+import findProduct from "../../utils/findProduct";
+import Image from "next/image";
 export default function ProductPage() {
   const isMounted = useMounted();
+  const pathname = usePathname();
+  const id = urlParser(pathname);
+  const product = findProduct(id);
 
-  if (!isMounted) {
+  if (!isMounted || !product) {
     return null;
   }
 
@@ -15,12 +21,12 @@ export default function ProductPage() {
     <main className={styles.container}>
       <div className={styles.imageContainer}>
         <div className={styles.mainImage}>
-          {/* <Image src={ngcModel} alt="NGC Model" /> */}
-
-          <img
-            src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-            alt="Running shorts front view"
+          <Image
             className={styles.productImage}
+            src={product?.src}
+            alt={product?.alt}
+            width={500}
+            height={500}
           />
         </div>
         <button
@@ -36,19 +42,39 @@ export default function ProductPage() {
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.productInfo}>
-          <div className={styles.badge}>NEW</div>
-          <h1 className={styles.productTitle}>RUNNING 2 IN 1 SHORTS</h1>
-          <p className={styles.productFit}>Regular Fit</p>
-          <p className={styles.productPrice}>$72</p>
+          <div className={styles.badge}>{product?.category}</div>
+          <h1 className={styles.productTitle}>{product?.title}</h1>
+          <p className={styles.productFit}>{product?.description}</p>
+          <p className={styles.productPrice}>${product?.price}</p>
         </div>
         <div className={styles.colorSelection}>
           <p className={styles.colorOption}>White</p>
           <div className={styles.colorOptions}>
             <button className={`${styles.colorOption} ${styles.selected}`}>
-              <img
-                src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
-                alt="White shorts"
+              <Image
                 className={styles.colorImage}
+                src={product?.src}
+                alt={product?.alt}
+                width={500}
+                height={500}
+              />
+            </button>
+            <button className={styles.colorOption}>
+              <Image
+                className={styles.colorImage}
+                src={product?.src}
+                alt={product?.alt}
+                width={500}
+                height={500}
+              />
+            </button>
+            <button className={styles.colorOption}>
+              <Image
+                className={styles.colorImage}
+                src={product?.src}
+                alt={product?.alt}
+                width={500}
+                height={500}
               />
             </button>
           </div>

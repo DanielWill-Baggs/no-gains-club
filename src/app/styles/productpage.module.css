@@ -4,7 +4,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  margin-top: 4rem;
+  padding: 4rem;
   overflow: hidden;
 }
 
@@ -17,21 +17,33 @@
 /* Image section */
 .imageContainer {
   position: relative;
-  width: 100%;
+  width: 70%;
   max-height: 100%;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-.imageContainer .mainImage {
+.mainImage {
   aspect-ratio: 1 / 1;
   background-color: #f3f3f3;
-  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .productImage {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: 500px;
+  height: 500px;
   object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .carouselButton {
@@ -46,11 +58,11 @@
 }
 
 .carouselButtonLeft {
-  left: 1.2rem;
+  left: 30%;
 }
 
 .carouselButtonRight {
-  right: 1.2rem;
+  right: 30%;
 }
 
 .icon {
@@ -128,10 +140,12 @@
   width: 4rem;
   height: 4rem;
   transition: border-color 0.3s;
+  opacity: 0.5;
 }
 
 .colorOption.selected {
   border-color: black;
+  opacity: 1;
 }
 
 .colorImage {
@@ -208,6 +222,7 @@
 
 .favorite,
 .share {
+  background-color: #faf9f6;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -216,7 +231,7 @@
 
 /* Delivery info */
 .deliveryInfo {
-  background-color: #f9f9f9;
+  background-color: #f0f0f0;
   padding: 1rem;
   margin-top: 2rem;
 }
