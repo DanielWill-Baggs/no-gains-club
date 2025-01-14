@@ -5,6 +5,7 @@
 import HeroSection from "./components/herosection";
 import CardGrid from "./components/cardgrid";
 import ShowCase from "./components/showcase";
+import JapTeaser from "./teaser/japteaser";
 import useMounted from "./utils/useMounted";
 
 export default function Landing() {
@@ -18,6 +19,7 @@ export default function Landing() {
       <HeroSection />
       <CardGrid />
       <ShowCase />
+      <JapTeaser />
     </>
   );
 }
