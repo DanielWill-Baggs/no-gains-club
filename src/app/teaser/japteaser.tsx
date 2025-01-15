@@ -5,32 +5,58 @@ import ngcLogo from "../../../public/ngc-logo-showcase.png";
 import ngcButton from "../../../public/ngc-logo.png";
 import NGCHero from "../../../public/ngc-hero-1.png";
 import NGCHero2 from "../../../public/ngc-hero-2.png";
+import NGCVillain from "../../../public/ngc-villain-1.png";
+import NGCVillain2 from "../../../public/ngc-villain-2.png";
 import { GenericButton } from "../components/button";
-
+import { useEffect, useState } from "react";
 /* Components and Layouts */
 
 export default function JapTeaser() {
+  const [isHero, setIsHero] = useState(true);
+  const [fadeClass, setFadeClass] = useState(styles.fadeIn);
+
+  const handleHero = () => {
+    setFadeClass(styles.fadeOut);
+    setTimeout(() => {
+      setIsHero(!isHero);
+      setFadeClass(styles.fadeIn);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    setFadeClass(styles.fadeIn);
+  }, [isHero]);
+
   return (
     <>
-      <main className={styles.container}>
-        <div className={styles.heroImage1}>
+      <div
+        className={`${styles.container} ${fadeClass} ${
+          isHero ? styles.bgHero : styles.bgVillain
+        }`}
+      >
+        <div className={styles.charImage1}>
           <Image
-            src={NGCHero}
-            alt="NGC Hero 1 Showcase"
+            src={isHero ? NGCHero : NGCVillain}
+            alt="NGC Character 1 Showcase"
             width={220}
             height={550}
           />
         </div>
-        <div className={styles.heroImage2}>
+        <div className={styles.charImage2}>
           <Image
-            src={NGCHero2}
-            alt="NGC Hero 2 Showcase"
+            src={isHero ? NGCHero2 : NGCVillain2}
+            alt="NGC Character 1 Showcase"
             width={220}
             height={550}
           />
         </div>
         <div className={styles.logoContainer}>
-          <div className={styles.logoText}>
+          <div
+            className={`${styles.logoText} ${
+              isHero ? styles.logoHero : styles.logoVillain
+            }
+      `}
+          >
             <h2>ノーゲインズクラブ</h2>
           </div>
           <div className={styles.logoImage}>
@@ -45,7 +71,10 @@ export default function JapTeaser() {
         <div className={styles.teaserDetailsContainer}>
           <div className={styles.teaserTitle}>
             <h1>
-              UNLEASH YOUR <span style={{ color: "#9E1219" }}>(HERO)</span>
+              UNLEASH YOUR{" "}
+              <span style={{ color: `${isHero ? "#9E1219" : "#CC9F16"}` }}>
+                {isHero ? "(HERO)" : "(VILLAIN)"}
+              </span>
             </h1>
           </div>
           <div className={styles.textContainer}>
@@ -63,7 +92,7 @@ export default function JapTeaser() {
             <GenericButton
               text="Coming Soon"
               inlineStyle={{
-                backgroundColor: " #CC9F16",
+                backgroundColor: `${isHero ? "#CC9F16" : "#9E1219"}`,
                 fontFamily: "var(--font-barlow-condensed)",
                 fontWeight: 400,
                 fontSize: "1.2em",
@@ -71,7 +100,13 @@ export default function JapTeaser() {
             />
           </div>
           <div className={styles.toggableContainer}>
-            <button className={styles.toggleButton}>
+            <button
+              className={`${styles.toggleButton} ${
+                isHero ? styles.buttonHero : styles.buttonVillain
+              }
+            `}
+              onClick={handleHero}
+            >
               <Image
                 src={ngcButton}
                 alt="NGC Logo Showcase"
@@ -81,7 +116,7 @@ export default function JapTeaser() {
             </button>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
