@@ -117,7 +117,7 @@ As the file is too big to embed here, feel free to view the showcase video at th
 
 ### Landing Showcase
 
-![Landing Showcase ](./public/landing-showcase.png)
+![Landing Showcase ](./public/Landing-Showcase.png)
 
 ---
 
