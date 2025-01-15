@@ -1,6 +1,6 @@
 # No Gains Club - E-commerce Platform
 
-Welcome to the **No Gains Club** e-commerce platform! This project is designed to provide a sleek and modern shopping experience for fitness enthusiasts. The platform leverages cutting-edge web technologies and a visually stunning UI powered by generative AI images, ReactJS, and GSAP.
+Welcome to the **No Gains Club** e-commerce platform! This project is designed to provide a sleek and modern shopping experience for fitness enthusiasts. The platform leverages cutting-edge web technologies and a visually stunning UI powered by generative AI images, ReactJS, and Framer Motion.
 
 ---
 
@@ -11,10 +11,11 @@ Welcome to the **No Gains Club** e-commerce platform! This project is designed t
 3. [Design Choices](#design-choices)
 4. [Page Layouts](#page-layouts)
 5. [Tech Stack](#tech-stack)
-6. [Installation](#installation)
-7. [Usage](#usage)
-8. [Contributing](#contributing)
-9. [License](#license)
+6. [Showcase Video](#showcase-video)
+7. [Installation](#installation)
+8. [Usage](#usage)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ---
 
@@ -84,13 +85,31 @@ Welcome to the **No Gains Club** e-commerce platform! This project is designed t
 
 ### **Frontend**
 
-- **ReactJS:** For building interactive and reusable UI components.
-- **GSAP :** For seamless animations and transitions.
-- **CSS Modules:** For modular and maintainable styling.
+- **ReactJS:** Used for building interactive and reusable UI components.
+- **Next.js:** Provides server-side rendering and routing.
+- **Framer Motion:** Enables seamless animations and transitions.
+- **CSS Modules:** Ensures modular and maintainable styling for components.
+
+### **Languages**
+
+- **TypeScript:** Enhances the development experience with strong typing.
+- **HTML:** Provides structure and semantics for the web pages.
+- **CSS:** Used for styling and layout of the application.
 
 ### **AI Integration**
 
 - **Generative AI Tools:** Used to create high-quality product visuals.
+
+---
+
+## Showcase Video
+
+Watch a demo of the webpage in action:
+
+<video width="100%" controls>
+  <source src="../no-gains-club/public/NGC Showcase Video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
