@@ -115,6 +115,10 @@ As the file is too big to embed here, feel free to view the showcase video at th
   Your browser does not support the video tag.
 </video>
 
+### Landing Showcase
+
+![Landing Showcase ](./public/landing-showcase.png)
+
 ---
 
 ## Installation
