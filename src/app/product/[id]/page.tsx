@@ -48,7 +48,7 @@ export default function ProductPage() {
           <p className={styles.productPrice}>${product?.price}</p>
         </div>
         <div className={styles.colorSelection}>
-          <p className={styles.colorOption}>White</p>
+          <p className={styles.colorOption}>Black</p>
           <div className={styles.colorOptions}>
             <button className={`${styles.colorOption} ${styles.selected}`}>
               <Image

@@ -82,7 +82,7 @@ export default function HeroSection() {
         />
         <div className={styles.bannerContainer}>
           <div className={styles.bannerImage}>
-            <Image src={ngcModel} alt="NGC Model" />
+            <Image src={ngcModel} alt="NGC Model" height={1000} width={700} />
           </div>
         </div>
       </div>
