@@ -11,7 +11,7 @@ Welcome to the **No Gains Club** e-commerce platform! This project is designed t
 3. [Design Choices](#design-choices)
 4. [Page Layouts](#page-layouts)
 5. [Tech Stack](#tech-stack)
-6. [Showcase Video](#showcase-video)
+6. [Showcase](#showcase)
 7. [Installation](#installation)
 8. [Usage](#usage)
 9. [Contributing](#contributing)
@@ -102,9 +102,13 @@ Welcome to the **No Gains Club** e-commerce platform! This project is designed t
 
 ---
 
-## Showcase Video
+## Showcase
 
-Watch a demo of the webpage in action:
+~~watch a demo of the webpage in action:~~
+
+As the file is too big to embed here, feel free to view the showcase video at the following path:
+
+"./public/NGC Showcase Video.mp4"
 
 <video width="100%" controls>
   <source src="../no-gains-club/public/NGC Showcase Video.mp4" type="video/mp4">
